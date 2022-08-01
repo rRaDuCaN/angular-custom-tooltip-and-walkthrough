@@ -1,0 +1,45 @@
+<div
+    *ngIf="tooltip"
+    class="custom-tooltip"
+    [class]="appliedTextClass"
+    [style.color]="textColor"
+    [style.max-width]="width + 'px'"
+    [style.border]="parentBorder()"
+    [style.font-size]="textSize"
+>
+    <div [class]="tipClass()">
+        <div [style]="tipBorder()"></div>
+    </div>
+    <button
+        mat-icon-button
+        *ngIf="shouldEnableCloseBtn"
+        (click)="closeBtnCb()"
+    >
+        <mat-icon class="close-custom-tooltip" svgIcon="close"></mat-icon>
+    </button>
+    <span>
+        {{ tooltip }}
+    </span>
+</div>
+<ng-template #templ>
+    <div
+        class="custom-tooltip"
+        [class]="appliedTextClass"
+        [style.color]="textColor"
+        [style.max-width]="width + 'px'"
+        [style.border]="parentBorder()"
+        [style.font-size]="textSize"
+    >
+        <div [class]="tipClass()">
+            <div  [style]="tipBorder()"></div>
+        </div>
+        <button
+            mat-icon-button
+            *ngIf="shouldEnableCloseBtn"
+            (click)="closeBtnCb()"
+        >
+            <mat-icon class="close-custom-tooltip" svgIcon="close"></mat-icon>
+        </button>
+        <ng-content></ng-content>
+    </div>
+</ng-template>

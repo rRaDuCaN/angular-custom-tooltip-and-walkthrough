@@ -1,0 +1,23 @@
+{
+  "learnAngular": {
+    "title": "Learn Angular Outlet",
+    "exempt": "In this tutorial, you build your own Angular application from the start. This is a good way to experience a typical development process as you learn Angular application-design concepts, tools, and terminology."
+  },
+  "cliDocumentation": {
+    "title": "CLI Documentation",
+    "exempt": "The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell."
+  },
+
+  "angularMaterial": {
+    "title": "Angular Material",
+    "exempt": "Internationalized and accessible components for everyone. Well tested to ensure performance and reliability."
+  },
+  "angularBlog": {
+    "title": "Angular Blog",
+    "exempt": "News and Tips from the Angular Team"
+  },
+  "addDependency": {
+    "title": "Add Dependency",
+    "exempt": "Shows how to add a dependency through angular cli"
+  }
+}

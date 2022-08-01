@@ -1,0 +1,41 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+
+.loader-backdrop {
+  background: #0000001f;
+}
+
+.hooked-hand-holder {
+  position: relative;
+  background-color: #fff;
+  pointer-events: none;
+  // done out of necessity
+  z-index: 2001 !important;
+}
+
+.hooked-hand-holder-reverted {
+  position: static;
+  background-color: transparent;
+  pointer-events: all;
+  z-index: inherit;
+}
+
+.custom-tooltip-animation {
+  animation-name: tooltip-show;
+  animation-duration: 300ms;
+}
+
+.custom-tooltip-backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+@keyframes tooltip-show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

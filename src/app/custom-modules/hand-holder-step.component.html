@@ -1,0 +1,15 @@
+<div class="holder-tip-wrapper" [class]="tipPosition + animationClass">
+    <div class="holder-tip-gen">
+        <div class="info">
+            <span class="steps">{{props.currStep()}}/{{props.numOfSteps()}}</span>
+            <button class="skip-btn" mat-flat-button (click)="onSkip()">
+                <span>Skip tips</span>
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+        <p class="title">{{props.title}}</p>
+        <p class="exempt">{{props.exempt}}</p>
+        <button color="primary" mat-flat-button (click)="onNext()">{{props.isLast ? 'Got it' : 'Next'}}</button>
+    </div>
+    <span class="holder-tip"></span>
+</div>

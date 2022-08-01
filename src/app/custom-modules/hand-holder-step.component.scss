@@ -1,0 +1,122 @@
+$min-height: 120px;
+$max-height: 180px;
+$width: 265px;
+$padding: 20px;
+
+:host(hand-holder-step) {
+    z-index: 1001;
+    margin: 36px;
+}
+
+.holder-tip-left,
+.holder-tip-before {
+    .holder-tip {
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 24px solid #fff;
+        right: 12px;
+    }
+}
+
+.holder-tip-right,
+.holder-tip-after {
+    .holder-tip {
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-right: 24px solid #fff;
+        left: 12px;
+    }
+}
+
+.holder-tip-above,
+.holder-tip-below {
+    flex-direction: column;
+}
+
+.holder-tip-below {
+    .holder-tip {
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 24px solid #fff;
+        top: 12px;
+    }
+}
+
+.holder-tip-above {
+    .holder-tip {
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 24px solid #fff;
+        bottom: 12px;
+    }
+}
+
+.holder-tip-show-animation {
+    opacity: 1;
+    visibility: visible;
+}
+
+.holder-tip-hide-animation {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.holder-tip-wrapper {
+    display: flex;
+    align-items: center;
+    transition: opacity 200ms ease-in-out;
+
+    .holder-tip {
+        position: absolute;
+        display: inline-block;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+.holder-tip-gen {
+    position: relative;
+    max-width: $width;
+    padding: $padding;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #212026;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .steps,
+        button {
+            color: palevioletred;
+            background-color: transparent;
+        }
+
+        .skip-btn {
+            padding: 0;
+        }
+    }
+
+    .exempt {
+        min-height: $min-height;
+        max-height: $max-height;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    p.title,
+    button,
+    .info {
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    button {
+        align-self: flex-end;
+    }
+}
